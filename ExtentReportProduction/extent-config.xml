@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <theme>standard</theme>
+
+        <!-- document encoding -->
+        <encoding>UTF-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <protocol>http</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>OrangeHRM Project</documentTitle>
+
+        <!-- report name - displayed at top-nav with logo -->
+        <reportName>
+            <![CDATA[
+                <div style="display: flex; align-items: center;">
+                    <span>OrangeHRM Test Project Report</span>
+                    <img src='C:/Users/dell/eclipse-workspace/ExtentReportProduction/Logo/Orangehrm_branding.png' style="height: 24px; margin-left: 10px;"/>
+                </div>
+            ]]>
+        </reportName>
+
+        <!-- location of charts in the test view -->
+        <testViewChartLocation>bottom</testViewChartLocation>
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    // Custom JavaScript can be added here if needed
+                });
+            ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+            .report-name {
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+            }
+            .report-name img {
+                height: 24px;
+                margin-left: 10px;
+                vertical-align: middle;
+            }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>
