@@ -27,4 +27,9 @@ public class OrangeHRM_Tests extends BaseClass {
 		Assert.assertEquals(actualTitle, expectedTitel);
 	}
 
+	@Test
+	public void testDemo() {
+		System.out.println("Demo Test");
+	}
+
 }
