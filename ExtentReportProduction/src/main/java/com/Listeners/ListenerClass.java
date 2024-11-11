@@ -4,6 +4,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -31,8 +32,10 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 			test.log(Status.FAIL,
 					MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 
-			String pathString = BaseClass.screenShot(result.getName()); // ScreenShot Attach in report Code
-			test.addScreenCaptureFromPath(pathString); // ScreenShot Attach in report Code
+			String pathString = BaseClass.screenShot(BaseClass.driver, result.getName()); // ScreenShot Attach in report
+																							// Code
+			test.fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(pathString).build());
+			// ScreenShot Attach in report Code
 		}
 	}
 
