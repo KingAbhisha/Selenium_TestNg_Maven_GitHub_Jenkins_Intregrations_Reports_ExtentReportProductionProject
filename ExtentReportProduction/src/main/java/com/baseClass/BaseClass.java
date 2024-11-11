@@ -60,7 +60,11 @@ public class BaseClass {
 		} catch (Exception e) {
 			e.getMessage();
 		}
-		return destination;
+
+		String newImageString = "http://localhost:8080/job/Selenium_TestNg_Maven_GitHub_Jenkins_Intregrations_Reports/ws/ExtentReportProduction/ScreenShot/"
+				+ filename + "_" + getCurrentTime() + ".png";
+
+		return newImageString;
 	}
 
 	public static String getCurrentTime() {
